@@ -19,7 +19,8 @@ class ProductController extends Controller
     {
         //
 //        return Product::all();
-        return ProductCollection::collection(product::all());
+
+        return ProductCollection::collection(product::paginate(5));
 //        return ProductResource::collection(Product::all());
     }
 
