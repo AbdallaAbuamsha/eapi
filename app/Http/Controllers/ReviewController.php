@@ -17,7 +17,7 @@ class ReviewController extends Controller
     public function index($productId)
     {
         //
-        $product = Product::find($productId);
+        $product = Product::findOrFail($productId);
         return ReviewResource::collection($product->reviews);
     }
 
